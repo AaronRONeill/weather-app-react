@@ -15,9 +15,16 @@
       Aaron O'Neill
   </author>
 	
+	<icon src="icons/icon.png" gap:role="default" />
+	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<allow-navigation href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	
 	<!--
     This allows your app to load assets from all *.phongap.com domains
   -->
-  <access origin="*" />
+  <access origin="*" subdomains="true" />
 
 </widget>
