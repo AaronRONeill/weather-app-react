@@ -479,11 +479,16 @@ h1,h2,h3,h4,h5 {
  background-color: #3fb3c1;
 }	
 
+#main.night {
+ background-color: #212121;
+}	
+
 #main.unknown {
  background-color: #ad434d;
 }	
 
 /* Splash Screen */
+.cover,
 .overlay {
 	position: absolute;
 	top: 0;
@@ -494,7 +499,7 @@ h1,h2,h3,h4,h5 {
 	z-index: 900;
 }
 
-
+.precip,
 .loading {
 	position: absolute;
 	top: 0;
@@ -505,12 +510,60 @@ h1,h2,h3,h4,h5 {
 	margin: auto;
 }
 
+.precip .inner,
 .loading .icon {
 	margin: auto;
 	display: block;
 	top: 35%;
 	opacity: 0.5;
 }
+
+.precip .inner {
+	opacity: 1;
+	position: relative;
+	text-align: center;
+	max-width: 600px;
+	top: 10%;
+}
+
+.cover,
+.precip {
+	display: none;
+}
+
+/* Precipitation Overlay */
+.cover.sunny {
+ background-color: rgba(255, 152, 0, 0.9);
+}	
+
+.cover.rain {
+ background-color: rgba(33, 150, 243, 0.9);
+}	
+
+.cover.cloudy {
+ background-color: rgba(88, 88, 88, 0.9);
+}	
+
+.cover.lightening {
+ background-color: rgba(45, 44, 44, 0.9);
+}	
+
+.cover.partlysunny {
+ background-color: rgba(66, 175, 70, 0.9);
+}	
+
+.cover.snow {
+ background-color: rgba(63, 179, 193, 0.9);
+}	
+
+.cover.night {
+ background-color: rgba(33, 33, 33, 0.9);
+}	
+
+.cover.unknown {
+ background-color: rgba(173, 67, 77, 0.9);
+}
+
 
 /* Main Screen */
 span.last-upd {
@@ -524,7 +577,7 @@ span.last-upd {
 }
 
 h1 {
-	font-size:56px;
+	font-size: 40px;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -614,6 +667,79 @@ h3 {
 	margin-left: 2px;
 }
 
+.day-abbr {
+	margin-right: 5px;
+}
+
+.time {
+	margin-left: 5px;
+}
+
+p.feels-like {
+	font-size: 16px;
+	text-transform: capitalize;
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+p.feels-like .feels {
+	display: block;
+	font-size: 12px;
+	margin: 0 0 4px;
+}
+
+.wind-speeds {
+	margin: 10px 0 25px;
+}
+
+.wind-speeds .wind {
+	margin: 0 6px 0 0;
+}
+
+.wind-speeds .wind:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	background: url("../icons/wind.png");
+	background-size: cover;
+	margin-right: 4px;
+	opacity: 0.6;
+}
+
+.wind-speeds .gust {
+	margin: 0 6px 0 6px;
+}
+
+.wind-speeds .gust:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../icons/gust.png);
+	background-size: cover;
+	margin-right: 4px;
+	opacity: 0.6;
+}
+
+.wind-speeds .dir {
+	margin: 0 0 0 6px;
+}
+
+.wind-speeds .dir:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url("../icons/direction.png");
+	background-size: cover;
+	margin-right: 4px;
+	opacity: 0.6;
+}
+
 /* Weather Icons */
 .icon {
   position: relative;
@@ -621,6 +747,11 @@ h3 {
   width: 12em;
   height: 10em;
   font-size: 1em; /* control icon size here */
+}
+
+.icon.night img {
+  width: 95px;
+  margin-top: 25px;
 }
 
 .cloud {
