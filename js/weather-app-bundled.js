@@ -166,7 +166,6 @@ var Application = function (_React$Component) {
 				url: forecast_url,
 				dataType: "jsonp",
 				success: function success(data) {
-					console.log(data);
 
 					var detailed_forecast = [];
 					var forecast_txt = data.forecast.txt_forecast.forecastday;
@@ -242,7 +241,6 @@ var Application = function (_React$Component) {
 						detailForecast: detailed_forecast
 					});
 
-					console.log(detailed_forecast);
 				},
 				error: function error(xhr, ajaxOptions, thrownError) {
 					console.log("Error: Could not retrieve weather!");
@@ -487,8 +485,6 @@ var Application = function (_React$Component) {
 	}, {
 		key: 'hideForecast',
 		value: function hideForecast() {
-
-			console.log("Fade Out");
 
 			(0, _jquery2.default)(".forecast-popup").fadeOut(500);
 
