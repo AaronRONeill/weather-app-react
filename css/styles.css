@@ -488,6 +488,7 @@ h1,h2,h3,h4,h5 {
 }	
 
 /* Splash Screen */
+.cover-forecast,
 .cover,
 .overlay {
 	position: absolute;
@@ -499,6 +500,7 @@ h1,h2,h3,h4,h5 {
 	z-index: 900;
 }
 
+.forecast-popup,
 .precip,
 .loading {
 	position: absolute;
@@ -510,6 +512,7 @@ h1,h2,h3,h4,h5 {
 	margin: auto;
 }
 
+.forecast-popup .inner,
 .precip .inner,
 .loading .icon {
 	margin: auto;
@@ -518,6 +521,7 @@ h1,h2,h3,h4,h5 {
 	opacity: 0.5;
 }
 
+.forecast-popup .inner,
 .precip .inner {
 	opacity: 1;
 	position: relative;
@@ -526,42 +530,56 @@ h1,h2,h3,h4,h5 {
 	top: 10%;
 }
 
+.forecast-popup .inner {
+	padding: 0 20px;
+}
+
+.cover-forecast,
+.forecast-popup,
 .cover,
 .precip {
 	display: none;
 }
 
 /* Precipitation Overlay */
+.cover-forecast.sunny,
 .cover.sunny {
- background-color: rgba(255, 152, 0, 0.9);
+ background-color: rgba(255, 152, 0, 0.97);
 }	
 
+.cover-forecast.rain,
 .cover.rain {
- background-color: rgba(33, 150, 243, 0.9);
+ background-color: rgba(33, 150, 243, 0.97);
 }	
 
+.cover-forecast.cloudy,
 .cover.cloudy {
- background-color: rgba(88, 88, 88, 0.9);
+ background-color: rgba(88, 88, 88, 0.97);
 }	
 
+.cover-forecast.lightening,
 .cover.lightening {
- background-color: rgba(45, 44, 44, 0.9);
+ background-color: rgba(45, 44, 44, 0.97);
 }	
 
+.cover-forecast.partlysunny,
 .cover.partlysunny {
- background-color: rgba(66, 175, 70, 0.9);
+ background-color: rgba(66, 175, 70, 0.97);
 }	
 
+.cover-forecast.snow,
 .cover.snow {
- background-color: rgba(63, 179, 193, 0.9);
+ background-color: rgba(63, 179, 193, 0.97);
 }	
 
+.cover-forecast.night,
 .cover.night {
- background-color: rgba(33, 33, 33, 0.9);
+ background-color: rgba(33, 33, 33, 0.97);
 }	
 
+.cover-forecast.unknown,
 .cover.unknown {
- background-color: rgba(173, 67, 77, 0.9);
+ background-color: rgba(173, 67, 77, 0.97);
 }
 
 
@@ -644,6 +662,7 @@ h3 {
 	display: inline-block;
 	width: 33%;
 	margin-right: -4px;
+	cursor: pointer;
 }
 
 .forecast .day img {
@@ -738,6 +757,16 @@ p.feels-like .feels {
 	background-size: cover;
 	margin-right: 4px;
 	opacity: 0.6;
+}
+
+span.close {
+	font-weight: bold;
+	font-size: 26px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 15px 20px;
+	cursor: pointer;
 }
 
 /* Weather Icons */
